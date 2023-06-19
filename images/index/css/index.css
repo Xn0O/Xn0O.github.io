@@ -1,0 +1,285 @@
+.page {
+  background-color: #ffffff;
+  background-image: url('../images/background.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.group {
+  padding-bottom: 1459px;
+}
+.section {
+  padding: 80px 80px 50px 245px;
+  background-image: url('../images/background.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.header {
+  padding-left: 13px;
+}
+.font_1 {
+  font-size: 16px;
+  font-family: Muli;
+  line-height: 13px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.text_header {
+    margin-left: 20px;
+}
+.text_LOGO {
+    color: #ffffff;
+    font-size: 45px;
+    font-family: Myriad Pro;
+    line-height: 30px;
+}
+.text_cc{
+	font-size: 30px;
+  	line-height: 29px;
+}
+.font_2 {
+  font-size: 18px;
+  font-family: Myriad Pro;
+  line-height: 16px;
+  color: #ffffff;
+}
+.font_3 {
+  font-size: 20px;
+  font-family: Myriad Pro;
+  line-height: 13px;
+  color: #ffffff;
+}
+.font_4 {
+  font-size: 16px;
+  font-family: Myriad Pro;
+  line-height: 11px;
+  color: #9cb4ff;
+}
+.font_5 {
+  font-size: 48px;
+  font-family: Myriad Pro;
+  line-height: 45px;
+  color: #ffffff;
+}
+.button_off {
+  margin-left: 60px;
+  padding: 22px 0 16px;
+  box-shadow: 0px 40px 50px #416eff40, inset 1.5px -5px 8px #416eff80;
+  border-radius: 30px;
+  width: 120px;
+  height: 60px;
+  border: solid 3px #416eff;
+}
+
+
+.button_on {
+  margin-left: 60px;
+  padding: 25px 0 18px;
+  background-color: #416eff;
+  box-shadow: 0px 40px 50px #416eff40, inset 1.5px -5px 8px #416eff80;
+  border-radius: 30px;
+  width: 120px;
+  height: 60px;
+}
+
+.button_off1 {
+  margin-left: 60px;
+  padding: 22px 0 16px;
+  box-shadow: 0px 40px 50px #416eff40, inset 1.5px -5px 8px #416eff80;
+  border-radius: 30px;
+  width: 120px;
+  height: 60px;
+  border: solid 3px #416eff;
+}
+
+
+.button_on1 {
+  margin-left: 60px;
+  padding: 25px 0 18px;
+  background-color: #416eff;
+  box-shadow: 0px 40px 50px #416eff40, inset 1.5px -5px 8px #416eff80;
+  border-radius: 30px;
+  width: 120px;
+  height: 60px;
+}
+
+
+
+
+
+.text_content {
+  word-break: break-all;
+  line-height: 32px;
+}
+
+
+.text_tittle {
+  margin-left: 3px;
+  color: #ffffff;
+  font-size: 85px;
+  font-family: Myriad Pro;
+  line-height: 95px;
+  text-shadow: 0px 40px 50px #416eff40;
+  word-break: break-all;
+  width: 514.5px;
+}
+
+
+.content1_left {
+  margin-top: 294px;
+  width: 500px;
+}
+
+
+
+.content_right {
+  padding: 0 29px 50px;
+  background-color: #416eff4d;
+  box-shadow: 0px 50px 70px #0000001a;
+  border-radius: 5px;
+  width: 445px;
+	display: flex;
+      justify-content: flex-end;
+}
+
+
+
+
+
+
+.image_left{
+	float: right;
+	margin-left: 400px;
+	
+}
+
+
+
+.div_height{
+	height: 150px;
+}
+
+
+.content2 {
+  margin: 8px 0;
+  padding: 164px 0;
+  filter: drop-shadow(0px 50px 70px #0000001a);
+  background-image: url('../images/content2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+}
+
+.font_content2 {
+  font-size: 16px;
+  font-family: Myriad Pro;
+  line-height: 28px;
+  color: #9cb4ff;
+}
+
+
+.content2_tit {
+  margin-right: 160px;
+  width: 500px;
+}
+
+.map{
+	position: relative;
+    height: 100vh
+}
+.map img{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content3 {
+
+  width: 450px;
+}
+.content3_left{
+	margin-left: 260px;
+}
+.content3_right{
+	margin-left: 430px;
+}
+.content4{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logoh{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+	
+  opacity: 0.5;
+  box-shadow: 0px 40px 50px #416eff40, inset 1.5px -5px 8px #416eff80;
+  width: 1110px;
+}
+.logo1 {
+  width: 182px;
+  height: 39px;
+}
+.logo2 {
+  width: 181px;
+  height: 40px;
+}
+.logo3 {
+  width: 182px;
+  height: 43px;
+}
+.logo4 {
+  width: 182px;
+  height: 20px;
+}
+.logo5 {
+  width: 182px;
+  height: 23px;
+}
+.content5 {
+  margin-top: 150px;
+  padding-left: 244px;
+}
+.content51 {
+  margin-top: 73px;
+  width: 432px;
+}
+.content6{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.group_38 {
+  margin-top: 58px;
+  padding-left: 244px;
+  padding-right: 236px;
+}
+.text {
+  text-transform: uppercase;
+}
+.text_f {
+  margin-left: 20px;
+}
+.footer_1 {
+  height: 21px;
+}
+.footer_2 {
+  font-size: 16px;
+  font-family: Myriad Pro;
+  line-height: 13px;
+  color: #9cb4ff;
+}
+.footerr {
+  margin-top: -21px;
+  padding: 0 35px;
+}
