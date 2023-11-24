@@ -27,8 +27,12 @@
 <meta property="og:description" content="记录">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/javalearn/01.jpg">
+<meta property="og:image" content="http://example.com/images/javalearn/02.jpg">
+<meta property="og:image" content="http://example.com/images/javalearn/03.jpg">
+<meta property="og:image" content="http://example.com/images/javalearn/04.jpg">
+<meta property="og:image" content="http://example.com/images/javalearn/05.jpg">
 <meta property="article:published_time" content="2023-11-23T16:18:04.000Z">
-<meta property="article:modified_time" content="2023-11-23T17:49:55.938Z">
+<meta property="article:modified_time" content="2023-11-24T17:32:58.110Z">
 <meta property="article:author" content="Xn0O">
 <meta property="article:tag" content="-草履虫的进化研究">
 <meta name="twitter:card" content="summary">
@@ -336,7 +340,7 @@
                 <!-- 文章字数统计 -->
                 
                     <div class="post-intro-read">
-                        <span>字数记录: <span class="post-count word-count">767</span>阅读消耗: <span class="post-count reading-time">3 min</span></span>
+                        <span>字数记录: <span class="post-count word-count">1.3k</span>阅读消耗: <span class="post-count reading-time">5 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -499,19 +503,72 @@
     <article class="article-entry">
         <p>记录</p>
 <span id="more"></span>
-<h2 id="本栏目由-晕乎乎阿魂-amp-我知道肯定不会有人无聊到看这个的只是方便自己复习的笔记而已-赞助播出"><a href="#本栏目由-晕乎乎阿魂-amp-我知道肯定不会有人无聊到看这个的只是方便自己复习的笔记而已-赞助播出" class="headerlink" title="本栏目由 晕乎乎阿魂 &amp; 我知道肯定不会有人无聊到看这个的只是方便自己复习的笔记而已 赞助播出"></a>本栏目由 晕乎乎阿魂 &amp; 我知道肯定不会有人无聊到看这个的只是方便自己复习的笔记而已 赞助播出</h2><center>“做笔记能够记住很多东西”</center>
+<h2 id="本栏目由-晕乎乎阿魂-amp-我知道肯定不会有人无聊到看这个的只是方便自己复习的笔记而已-赞助播出"><a href="#本栏目由-晕乎乎阿魂-amp-我知道肯定不会有人无聊到看这个的只是方便自己复习的笔记而已-赞助播出" class="headerlink" title="本栏目由 晕乎乎阿魂 &amp; 我知道肯定不会有人无聊到看这个的只是方便自己复习的笔记而已 赞助播出"></a>本栏目由 晕乎乎阿魂 &amp; 我知道肯定不会有人无聊到看这个的只是方便自己复习的笔记而已 赞助播出</h2><center>“  ”</center>
 
-<h2 id="JDK-amp-JRE-amp-JVM"><a href="#JDK-amp-JRE-amp-JVM" class="headerlink" title="JDK&amp;JRE&amp;JVM"></a>JDK&amp;JRE&amp;JVM</h2><p>首先介绍一下它们仨：<br>由图就可以知道它们的关系是JDK包含JRE包含JVM<br><img src="/../images/javalearn/01.jpg"></p>
+<h2 id="1-基础"><a href="#1-基础" class="headerlink" title="1.基础"></a>1.基础</h2><h3 id="1-1-1-JDK-amp-JRE-amp-JVM"><a href="#1-1-1-JDK-amp-JRE-amp-JVM" class="headerlink" title="1.1.1.JDK&amp;JRE&amp;JVM"></a>1.1.1.JDK&amp;JRE&amp;JVM</h3><p>首先介绍一下它们仨：<br>由图就可以知道它们的关系是JDK包含JRE包含JVM<br><img src="/../images/javalearn/01.jpg"></p>
 <ul>
 <li>JDK（开发工具包）：Java标准开发包，它提供了编译、运行Java程序所需的各种工具和资源，包括Java编译器、Java运行时环境、以及常用的Java类库等。</li>
 <li>JRE（运行环境，运行时类库）：Java运行环境，用于解释执行Java的字节码文件。</li>
 <li>JVM（Java虚拟机）：Java虚拟机，是JRE的一部分。负责解释执行字节码文件，是可运行java字节码文件的虚拟计算机。</li>
 </ul>
-<h3 id="联系和区别"><a href="#联系和区别" class="headerlink" title="联系和区别"></a>联系和区别</h3><ul>
+<hr>
+<h4 id="联系和区别"><a href="#联系和区别" class="headerlink" title="联系和区别"></a>联系和区别</h4><ul>
 <li>JDK包含JRE,而JDK和JRE中都包含了JVM。JDK除了包含JRE还包含一些常用开发工具和基础类库。</li>
 <li>JDK用于开发，JRE用于运行java程序。</li>
-<li>JVM是java编程语言的核心并且具有平台独立性。</li>
+<li>JVM是java编程语言的核心并且具有平台独立性。可跨平台。</li>
 </ul>
+<p><img src="/../images/javalearn/02.jpg"><br>java程序通过JVM可以在不同的平台运行。</p>
+<h3 id="1-1-2-开发java程序的3个步骤"><a href="#1-1-2-开发java程序的3个步骤" class="headerlink" title="1.1.2.开发java程序的3个步骤"></a>1.1.2.开发java程序的3个步骤</h3><ol>
+<li>编写源文件<ol start="2">
+<li>编译源文件生成字节码<ol start="3">
+<li>加载运行字节码</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="1-1-3-java程序运行过程"><a href="#1-1-3-java程序运行过程" class="headerlink" title="1.1.3.java程序运行过程"></a>1.1.3.java程序运行过程</h3><ol>
+<li>javac：java源文件-&gt;class字节码文件<ol start="2">
+<li>java：运行class文件</li>
+</ol>
+</li>
+</ol>
+<p>编写完Test文件后<br>在cmd执行javac Test.java<br>此时文件夹中就会出现Test.class的字节码文件<br>再执行java Test就可以运行此java程序了</p>
+<h3 id="1-1-4-java程序语句执行顺序"><a href="#1-1-4-java程序语句执行顺序" class="headerlink" title="1.1.4.java程序语句执行顺序"></a>1.1.4.java程序语句执行顺序</h3><p>java程序语句执行的顺序包括4种基本控制结构：顺序结构、选择结构、循环结构、异常处理逻辑结构。</p>
+<h3 id="1-2-1-基本语法"><a href="#1-2-1-基本语法" class="headerlink" title="1.2.1.基本语法"></a>1.2.1.基本语法</h3><ul>
+<li>方法格式：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">权限修饰符  返回值声明  方法名称(参数列表)&#123;</span><br><span class="line"></span><br><span class="line">    方法中封装的逻辑；</span><br><span class="line"></span><br><span class="line">    return 返回值；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>权限修饰符<br><img src="/../images/javalearn/03.jpg"></li>
+</ul>
+<p>方法前面不加修饰符的话就是默认的default</p>
+<h3 id="1-3-1-变量常量"><a href="#1-3-1-变量常量" class="headerlink" title="1.3.1.变量常量"></a>1.3.1.变量常量</h3><h4 id="变量的定义："><a href="#变量的定义：" class="headerlink" title="变量的定义："></a>变量的定义：</h4><p>按所属的数据类型划分：</p>
+<ul>
+<li><p>基本数据类型</p>
+</li>
+<li><p>引用数据类型<br><img src="/../images/javalearn/04.jpg"><br>按声明的位置划分：</p>
+</li>
+<li><p>局部变量：方法或语句内部定义的变量</p>
+</li>
+<li><p>成员变量：方法外部、类的内部定义的变量<br><img src="/../images/javalearn/05.jpg"></p>
+</li>
+</ul>
+<h4 id="类的转换"><a href="#类的转换" class="headerlink" title="类的转换"></a>类的转换</h4><ul>
+<li>boolean 类型不能转换成其他任何类型</li>
+<li>自动转换类型：容量小的类型自动转换成容量大的数据类型&#x2F;&#x2F;byte，short，int-&gt;long-&gt;double</li>
+<li>byte,short,int不会互相转换，三者在计算中会转换成int类型</li>
+<li>强制转换类型：容量大的类型转换成容量小的数据类型时，要加上强制转换符如(int)c</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如：</span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> <span class="number">3</span>;</span><br><span class="line"><span class="type">float</span> <span class="variable">b</span> <span class="operator">=</span> c;<span class="comment">//c赋值-&gt;b、int-&gt;float不需要强制转换符</span></span><br><span class="line">c = (<span class="type">int</span>)b;<span class="comment">//b赋值-&gt;c、float-&gt;int需要强制转换符</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="关于常量"><a href="#关于常量" class="headerlink" title="关于常量"></a>关于常量</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">c = <span class="number">4</span>; ！！！<span class="comment">//此时会报错，因为常量是不可改变的</span></span><br></pre></td></tr></table></figure>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>关于变量赋值：</p>
+<ul>
+<li>float a &#x3D; 1.1f;&#x2F;&#x2F;要加上f<br>因为float a &#x3D; 1.1;这个1.1会默认被识别成double类型，不加f会报错</li>
+<li>long a &#x3D; 1019888l;&#x2F;&#x2F;要加上l</li>
+<li>char a &#x3D; ‘白’;&#x2F;&#x2F;要加上’’</li>
+</ul>
+<h3 id="1-4-运算符"><a href="#1-4-运算符" class="headerlink" title="1.4.运算符"></a>1.4.运算符</h3><p>三目运算：<br>XX?X:X<br>如int a&gt;1?1:0<br>a&gt;1则输出1；若a&lt;1则输出0；</p>
 <h2 id="类的封装"><a href="#类的封装" class="headerlink" title="类的封装"></a>类的封装</h2><ul>
 <li>将类（class）的某些信息隐藏在类的内部，不允许外部程序直接访问，而是通过该类提供的getter、setter的方法来对隐藏的信息进行操作和访问。</li>
 </ul>
@@ -645,7 +702,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%A0%8F%E7%9B%AE%E7%94%B1-%E6%99%95%E4%B9%8E%E4%B9%8E%E9%98%BF%E9%AD%82-amp-%E6%88%91%E7%9F%A5%E9%81%93%E8%82%AF%E5%AE%9A%E4%B8%8D%E4%BC%9A%E6%9C%89%E4%BA%BA%E6%97%A0%E8%81%8A%E5%88%B0%E7%9C%8B%E8%BF%99%E4%B8%AA%E7%9A%84%E5%8F%AA%E6%98%AF%E6%96%B9%E4%BE%BF%E8%87%AA%E5%B7%B1%E5%A4%8D%E4%B9%A0%E7%9A%84%E7%AC%94%E8%AE%B0%E8%80%8C%E5%B7%B2-%E8%B5%9E%E5%8A%A9%E6%92%AD%E5%87%BA"><span class="toc-number">1.</span> <span class="toc-text">本栏目由 晕乎乎阿魂 &amp; 我知道肯定不会有人无聊到看这个的只是方便自己复习的笔记而已 赞助播出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDK-amp-JRE-amp-JVM"><span class="toc-number">2.</span> <span class="toc-text">JDK&amp;JRE&amp;JVM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E5%92%8C%E5%8C%BA%E5%88%AB"><span class="toc-number">2.1.</span> <span class="toc-text">联系和区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">类的封装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#getter-setter%E2%86%93"><span class="toc-number">3.1.</span> <span class="toc-text">getter setter↓</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E4%B8%80%E4%B8%AA%E5%B0%81%E8%A3%85"><span class="toc-number">3.2.</span> <span class="toc-text">写一个封装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8Cclass-Test%E8%BF%99%E4%B8%AA%E6%B5%8B%E8%AF%95%E7%B1%BB"><span class="toc-number">3.2.1.</span> <span class="toc-text">运行class Test这个测试类</span></a></li></ol></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%A0%8F%E7%9B%AE%E7%94%B1-%E6%99%95%E4%B9%8E%E4%B9%8E%E9%98%BF%E9%AD%82-amp-%E6%88%91%E7%9F%A5%E9%81%93%E8%82%AF%E5%AE%9A%E4%B8%8D%E4%BC%9A%E6%9C%89%E4%BA%BA%E6%97%A0%E8%81%8A%E5%88%B0%E7%9C%8B%E8%BF%99%E4%B8%AA%E7%9A%84%E5%8F%AA%E6%98%AF%E6%96%B9%E4%BE%BF%E8%87%AA%E5%B7%B1%E5%A4%8D%E4%B9%A0%E7%9A%84%E7%AC%94%E8%AE%B0%E8%80%8C%E5%B7%B2-%E8%B5%9E%E5%8A%A9%E6%92%AD%E5%87%BA"><span class="toc-number">1.</span> <span class="toc-text">本栏目由 晕乎乎阿魂 &amp; 我知道肯定不会有人无聊到看这个的只是方便自己复习的笔记而已 赞助播出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E7%A1%80"><span class="toc-number">2.</span> <span class="toc-text">1.基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-JDK-amp-JRE-amp-JVM"><span class="toc-number">2.1.</span> <span class="toc-text">1.1.1.JDK&amp;JRE&amp;JVM</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%94%E7%B3%BB%E5%92%8C%E5%8C%BA%E5%88%AB"><span class="toc-number">2.1.1.</span> <span class="toc-text">联系和区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-%E5%BC%80%E5%8F%91java%E7%A8%8B%E5%BA%8F%E7%9A%843%E4%B8%AA%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.2.</span> <span class="toc-text">1.1.2.开发java程序的3个步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-java%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-number">2.3.</span> <span class="toc-text">1.1.3.java程序运行过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-4-java%E7%A8%8B%E5%BA%8F%E8%AF%AD%E5%8F%A5%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="toc-number">2.4.</span> <span class="toc-text">1.1.4.java程序语句执行顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">2.5.</span> <span class="toc-text">1.2.1.基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-%E5%8F%98%E9%87%8F%E5%B8%B8%E9%87%8F"><span class="toc-number">2.6.</span> <span class="toc-text">1.3.1.变量常量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-number">2.6.1.</span> <span class="toc-text">变量的定义：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.6.2.</span> <span class="toc-text">类的转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%B8%B8%E9%87%8F"><span class="toc-number">2.6.3.</span> <span class="toc-text">关于常量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">2.6.4.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.7.</span> <span class="toc-text">1.4.运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">类的封装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#getter-setter%E2%86%93"><span class="toc-number">3.1.</span> <span class="toc-text">getter setter↓</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E4%B8%80%E4%B8%AA%E5%B0%81%E8%A3%85"><span class="toc-number">3.2.</span> <span class="toc-text">写一个封装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8Cclass-Test%E8%BF%99%E4%B8%AA%E6%B5%8B%E8%AF%95%E7%B1%BB"><span class="toc-number">3.2.1.</span> <span class="toc-text">运行class Test这个测试类</span></a></li></ol></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
