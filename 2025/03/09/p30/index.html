@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <!-- title -->
+
+
+    
+
+<!-- keywords -->
+
+
+
+<head>
+    <META NAME="ROBOTS" CONTENT="NOINDEX,NOFOLLOW">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="Xn0O">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="Xn0O">
+    
+        <meta name="keywords" content="Xn0O">
+    
+    <meta name="description" content="">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="神奇帽子.0">
+<meta property="og:url" content="http://example.com/2025/03/09/p30/index.html">
+<meta property="og:site_name" content="Xn0O">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/p30/00.png">
+<meta property="og:image" content="http://example.com/images/p30/002.png">
+<meta property="og:image" content="http://example.com/images/p30/0001.png">
+<meta property="og:image" content="http://example.com/images/p30/005.png">
+<meta property="og:image" content="http://example.com/images/p30/map.png">
+<meta property="og:image" content="http://example.com/images/p30/010.png">
+<meta property="og:image" content="http://example.com/images/p30/009.png">
+<meta property="og:image" content="http://example.com/images/p30/006.png">
+<meta property="og:image" content="http://example.com/images/p30/007.png">
+<meta property="og:image" content="http://example.com/images/p30/008.png">
+<meta property="og:image" content="http://example.com/images/p30/011.png">
+<meta property="article:published_time" content="2025-03-09T13:31:37.000Z">
+<meta property="article:modified_time" content="2025-03-09T15:54:23.326Z">
+<meta property="article:author" content="Xn0O">
+<meta property="article:tag" content="-unity">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/p30/00.png">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="/assets/favicon.ico">
+    
+    <title>神奇帽子.0 · Xn0O</title>
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+    (function (w) {
+        'use strict'
+        // rel=preload support test
+        if (!w.loadCSS) {
+            w.loadCSS = function () {}
+        }
+        // define on the loadCSS obj
+        var rp = (loadCSS.relpreload = {})
+        // rel=preload feature support test
+        // runs once and returns a function for compat purposes
+        rp.support = (function () {
+            var ret
+            try {
+                ret = w.document.createElement('link').relList.supports('preload')
+            } catch (e) {
+                ret = false
+            }
+            return function () {
+                return ret
+            }
+        })()
+
+        // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+        // then change that media back to its intended value on load
+        rp.bindMediaToggle = function (link) {
+            // remember existing media attr for ultimate state, or default to 'all'
+            var finalMedia = link.media || 'all'
+
+            function enableStylesheet() {
+                link.media = finalMedia
+            }
+
+            // bind load handlers to enable media
+            if (link.addEventListener) {
+                link.addEventListener('load', enableStylesheet)
+            } else if (link.attachEvent) {
+                link.attachEvent('onload', enableStylesheet)
+            }
+
+            // Set rel and non-applicable media type to start an async request
+            // note: timeout allows this to happen async to let rendering continue in IE
+            setTimeout(function () {
+                link.rel = 'stylesheet'
+                link.media = 'only x'
+            })
+            // also enable media after 3 seconds,
+            // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+            setTimeout(enableStylesheet, 3000)
+        }
+
+        // loop through link elements in DOM
+        rp.poly = function () {
+            // double check this to prevent external calls from running
+            if (rp.support()) {
+                return
+            }
+            var links = w.document.getElementsByTagName('link')
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i]
+                // qualify links to those with rel=preload and as=style attrs
+                if (
+                    link.rel === 'preload' &&
+                    link.getAttribute('as') === 'style' &&
+                    !link.getAttribute('data-loadcss')
+                ) {
+                    // prevent rerunning on link
+                    link.setAttribute('data-loadcss', true)
+                    // bind listeners to toggle media back
+                    rp.bindMediaToggle(link)
+                }
+            }
+        }
+
+        // if unsupported, run the polyfill
+        if (!rp.support()) {
+            // run once at least
+            rp.poly()
+
+            // rerun poly on an interval until onload
+            var run = w.setInterval(rp.poly, 500)
+            if (w.addEventListener) {
+                w.addEventListener('load', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            } else if (w.attachEvent) {
+                w.attachEvent('onload', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            }
+        }
+
+        // commonjs
+        if (typeof exports !== 'undefined') {
+            exports.loadCSS = loadCSS
+        } else {
+            w.loadCSS = loadCSS
+        }
+    })(typeof global !== 'undefined' ? global : this)
+</script>
+
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</style>
+
+    <link rel="preload" href="/css/style.css?v=20211217" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=20211217" as="style">
+    <link rel="stylesheet" href="/css/dark.css">
+    <link rel="stylesheet" href="/css/mobile.css?v=20211217" media="(max-width: 960px)">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js?v=20211217" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=20211217" as="script">
+    <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
+    <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <!-- algolia -->
+    
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ == undefined) {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js" />')
+        }
+    </script>
+    
+        <body class="post-body">
+    
+        <!-- header -->
+        <header class="header header-mobile">
+    <!-- top read progress line -->
+    <div class="header-element">
+        <div class="read-progress"></div>
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+            <div class="header-sidebar-menu">
+        
+            
+                <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- header actions -->
+    <div class="header-actions">
+        <!-- theme mode switch button -->
+        <span class="header-theme-btn header-element">
+            <i class="fas fa-adjust"></i>
+        </span>
+        <!-- back to home page text -->
+        <span class="home-link header-element">
+            <a href=/>Xn0O!</a>
+        </span>
+    </div>
+    <!-- toggle banner for post layout -->
+    
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">Xn0O!</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">神奇帽子.0</a>
+            </div>
+        </div>
+    
+</header>
+
+        <!-- fixed footer -->
+        <footer class="footer-fixed">
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+            <div class="back-top back-top-hidden">
+        
+        
+            <div>&#xe639;</div>
+        
+        </div>
+    </div>
+</footer>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="site-intro" style="
+
+
+
+
+
+
+
+    height:50vh;
+
+">
+    
+    <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
+    
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/bg0.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+                神奇帽子.0
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+                
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="-unity">-unity</a>
+    
+</div>
+
+                
+                <!-- 文章字数统计 -->
+                
+                    <div class="post-intro-read">
+                        <span>字数记录: <span class="post-count word-count">1.4k</span>阅读消耗: <span class="post-count reading-time">4 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2025/03/09</span>
+                    <!-- busuanzi -->
+                    
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+            <script>
+  // get user agent
+  function getBrowserVersions() {
+    var u = window.navigator.userAgent
+    return {
+      userAgent: u,
+      trident: u.indexOf('Trident') > -1, //IE内核
+      presto: u.indexOf('Presto') > -1, //opera内核
+      webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+      gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+      mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+      ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+      android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+      iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+      iPad: u.indexOf('iPad') > -1, //是否为iPad
+      webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+      weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+      uc: u.indexOf('UCBrowser') > -1, //是否为android下的UC浏览器
+    }
+  }
+  var browser = {
+    versions: getBrowserVersions(),
+  }
+  console.log('userAgent: ' + browser.versions.userAgent)
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded')
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document
+        .getElementsByClassName('intro-title')[0]
+        .classList.add('intro-fade-in')
+      document
+        .getElementsByClassName('intro-subtitle')[0]
+        .classList.add('intro-fade-in')
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in')
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb() {
+    if (browser.versions.uc) {
+      console.log('UCBrowser')
+      fontLoaded()
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular'],
+        },
+        loading: function () {
+          // 所有字体开始加载
+          // console.log('font loading');
+        },
+        active: function () {
+          // 所有字体已渲染
+          fontLoaded()
+        },
+        inactive: function () {
+          // 字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout')
+          fontLoaded()
+        },
+        timeout: 5000, // Set the timeout to two seconds
+      })
+    }
+  }
+
+  function asyncErr() {
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0]
+    o.src = u
+    if (cb) {
+      o.addEventListener(
+        'load',
+        function (e) {
+          cb(null, e)
+        },
+        false
+      )
+    }
+    if (err) {
+      o.addEventListener(
+        'error',
+        function (e) {
+          err(null, e)
+        },
+        false
+      )
+    }
+    s.parentNode.insertBefore(o, s)
+  }
+
+  var asyncLoadWithFallBack = function (arr, success, reject) {
+    var currReject = function () {
+      reject()
+      arr.shift()
+      if (arr.length) async(arr[0], success, currReject)
+    }
+
+    async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack(
+    [
+      'https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js',
+      'https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js',
+      "/lib/webfontloader.min.js",
+    ],
+    asyncCb,
+    asyncErr
+  )
+</script>
+
+            <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+            <div class="container container-unloaded">
+                <main class="main post-page">
+    <article class="article-entry">
+        <p><img src="/../images/p30/00.png" alt=" "></p>
+<span id="more"></span>
+<h1 id="大概是开发日志（什么？）V-0-1"><a href="#大概是开发日志（什么？）V-0-1" class="headerlink" title="大概是开发日志（什么？）V.0.1"></a>大概是开发日志（什么？）V.0.1</h1><p>欢迎来到本期节目，本期节目的主持人是…呃我是谁来着，总之欢迎您的到来。</p>
+<hr>
+<h2 id="1-胡言乱语"><a href="#1-胡言乱语" class="headerlink" title="1.胡言乱语"></a>1.胡言乱语</h2><p>咳咳，故事的开始要从一只白色的生物说起…<br><img src="/../images/p30/002.png" alt=" "><br>在一个白色的空间，不知名生物在寻求你的帮助，经过这段那段的对话后…锵锵！白色生物变成了神奇的帽子，戴上之后（转场）来到了神奇的森林开始了你的冒险。<br><img src="/../images/p30/0001.png" alt=" "><br><img src="/../images/p30/005.png" alt=" "></p>
+<hr>
+<h2 id="2-一些设定"><a href="#2-一些设定" class="headerlink" title="2.一些设定"></a>2.一些设定</h2><p>邪恶的女巫：女巫似乎对森林里的人们做了些什么，抹去了人们关于某件真相的记忆。女巫的法杖是剪刀外形的，被叫做“真理剪刀”。<br>主角：谁？–<br>真相是什么：女巫目睹了人类不断重复的故事，但这些故事无一例外只要到达某一个时间节点后，故事线就会重新回到原点。<br>总之你会在森林里遇到各种各样的人类，动物，以及未知生物。<br>（俺的图图呢.JPG）<br><img src="/../images/p30/map.png" alt=" "><br><img src="/../images/p30/010.png" alt=" "><br><img src="/../images/p30/009.png" alt=" "></p>
+<hr>
+<h2 id="3-战斗系统"><a href="#3-战斗系统" class="headerlink" title="3.战斗系统"></a>3.战斗系统</h2><p>想不出什么有趣的战斗方式，然后就想到了Undertale（以下称ut）的战斗系统。<br>（碎碎念时间）<br><em>ut可以说是我的白月光游戏，因为大概在七年前，我的破烂电脑什么游戏都玩不了除了扫雷和那个纸牌游戏，但不知道是什么原因我在盗版游戏网站上发现了一个叫做传说之下的游戏（不记得是哪个汉化组汉化的了对不起但是很感谢顺便一说我也补票了可惜至今还是没有官方中文），看了看画面感觉我的破烂电脑应该能够运行于是我便开始接触这个虽然画风简陋但是音乐和对话很温馨的游戏，对我幼小的心灵产生了很大的影响（？），给我孤独的高中生涯带来了一丝温暖，每次周末都期待着回家打开这款游戏，我还记得我在火山的某个谜题里卡了很久，还有与各种怪物们的有趣对话，以及动物们用特殊石头点缀的“星空”，这个地底世界真的很美好…当时并不知道什么屠杀线，和平线，对于更深层的剧情我也什么都不知道，但是很感谢ut的存在。</em><br>（碎碎念结束）<br>不过我发现网络上关于ut的战斗系统教程大多数都是GameMaker引擎的，unity怎么实现我倒是没怎么找到，我试着分析ut的战斗系统，可以得到的信息是：<br>通过【宽恕&#x2F;攻击】可以知道ut的生命值系统有两种计数方式，一种是通过攻击消耗的真实生命值，另一种是通过行动交互对话的情感值系统，达到一定的情感值就可以宽恕敌人（当名字变黄的时候），或者通过选择宽恕可以改变情感值，情感值达到一定程度时也可以结束战斗。<br>1.Ut的战斗有多个阶段的循环，选择&gt;躲避弹幕&gt;对话&gt;选择…循环。<br>2.在开始战斗时通常需要玩家进行不同的选择，攻击&#x2F;行动&#x2F;背包&#x2F;宽恕。<br>3.需要敌人具有的属性是生命值&#x2F;情感值&#x2F;对话文本。通过这些属性我们可以知道当情感值在某些值时只触发某段相应的对话，所以我们可以经常看见敌人重复某一些对话，生命值也是同理，当生命值达到某阶段时只触发某段对话。<br>4.似乎敌人的弹幕攻击方式也有不同，不同血量或者感情值的弹幕攻击是不一样的，或者说有时也会根据玩家的生命值选择不同的攻击方式，例如羊妈与玩家战斗时，当玩家处于残血状态其弹幕会自动躲避玩家的灵魂。<br>我要写的脚本有阶段管理.选项管理.战斗阶段对话系统还有弹幕攻击管理，凭借着我这微弱的编程能力，我只能用if else写出最最最最基本的攻击以及躲避。我放弃了在战斗中实现对话还有交互…不过好歹是有一个能玩的战斗系统了。下面呢，我介绍一下这个简陋的战斗系统：</p>
+<h3 id="攻击阶段"><a href="#攻击阶段" class="headerlink" title="攻击阶段"></a>攻击阶段</h3><p>首先你将遇到的第一个敌人是小猫，叫做[恶魔猫猫埋面模]名字灵感是当你用输入法打出emmmmmm时会出现恶魔妈妈买面膜于是这个名字便诞生了。攻击时，当手指指到中间的小条时触发攻击，指到其他区域时不触发攻击。<br><img src="/../images/p30/006.png" alt=" "><br><img src="/../images/p30/007.png" alt=" "><br>(不知道你发现了没有，我的手指画反了，但是我不会改了因为画这个攻击动画太麻烦了)</p>
+<h3 id="躲避阶段"><a href="#躲避阶段" class="headerlink" title="躲避阶段"></a>躲避阶段</h3><p>敌人在不同阶段有不同的弹幕攻击方式，随便一说，角色的判定点很小所以弹幕密集的情况下也不用担心，只需要微调一下位置就好了。<br><img src="/../images/p30/008.png" alt=" "><br><img src="/../images/p30/011.png" alt=" "></p>
+<hr>
+<h2 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h2><p>好吧没什么总结的，这就是本次节目的全部内容了，我们下次再见！（鞠躬）（离场）（关灯）</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+    </article>
+    <!-- license -->
+    
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2025/02/03/p29/" title="补充(1.)">
+                    <div class="prevTitle">补充(1.)</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="comment"></div>
+    <script>
+        new Valine({
+            el: '#comment',
+            notify:false,
+            verify:false,
+            appId: "VdVPo3yWQ9KcDKQX80suNMTE-9Nh9j0Va",
+            appKey: "fFZ55gIYW31P2Qu9kyeaZQfU",
+            placeholder: "留言（填写信息，以便收到回信，其实可以不填）",
+            path:window.location.pathname,
+            avatar:'hide'
+        });
+    </script>
+
+
+            
+
+        </div>
+    
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
+    
+</main>
+
+                <!-- profile -->
+                
+            </div>
+            <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+        <div class="social">
+            
+    
+        
+            
+                <a href="mailto:sstarrr@foxmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+        </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        
+        
+        <span id="theme-info"><hr/></span><br>
+        <span id="theme-info">©2023-2025 &nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener" href="https://xn0o.github.io/">Xn0O</a></span><br>
+
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- website approve for Chinese user -->
+    
+    <!-- 不蒜子  -->
+    
+        <div class="busuanzi-container">
+            
+             
+                <span id="busuanzi_container_site_pv">注视着 <span id="busuanzi_value_site_pv"></span> 只外星生物</span>
+            
+        </div>
+    	
+</footer>
+
+        </div>
+        <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E6%A6%82%E6%98%AF%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97%EF%BC%88%E4%BB%80%E4%B9%88%EF%BC%9F%EF%BC%89V-0-1"><span class="toc-number">1.</span> <span class="toc-text">大概是开发日志（什么？）V.0.1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD"><span class="toc-number">1.1.</span> <span class="toc-text">1.胡言乱语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%80%E4%BA%9B%E8%AE%BE%E5%AE%9A"><span class="toc-number">1.2.</span> <span class="toc-text">2.一些设定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%88%98%E6%96%97%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.</span> <span class="toc-text">3.战斗系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E9%98%B6%E6%AE%B5"><span class="toc-number">1.3.1.</span> <span class="toc-text">攻击阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BA%B2%E9%81%BF%E9%98%B6%E6%AE%B5"><span class="toc-number">1.3.2.</span> <span class="toc-text">躲避阶段</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B"><span class="toc-number">1.4.</span> <span class="toc-text">总结一下</span></a></li></ol></li></ol>
+            </div>
+        
+        <!-- sidebar -->
+        <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+        <div class="sidebar-panel-archives">
+    <!-- 在 ejs 中将 archive 按照时间排序 -->
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 13
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+        
+            
+            
+            <div class="archive-year"> 2025 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/09</span>
+            <a class="archive-post-title" href="/2025/03/09/p30/">神奇帽子.0</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/03</span>
+            <a class="archive-post-title" href="/2025/02/03/p29/">补充(1.)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/30</span>
+            <a class="archive-post-title" href="/2025/01/30/p28/">Oc.3</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2024 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/2024/06/19/p26/">这是...?</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/16</span>
+            <a class="archive-post-title" href="/2024/06/16/p25/">实验产物</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/30</span>
+            <a class="archive-post-title" href="/2024/05/30/p24/">Oc.2</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/30</span>
+            <a class="archive-post-title" href="/2024/05/30/p23/">世界观.O</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/11</span>
+            <a class="archive-post-title" href="/2024/03/11/p22/">制作关于草莓酱的游戏日志.0</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2023 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/12</span>
+            <a class="archive-post-title" href="/2023/08/12/p9/">Oc.1</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/27</span>
+            <a class="archive-post-title" href="/2023/06/27/p1/">存档.1</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/01</span>
+            <a class="archive-post-title" href="/2023/06/01/2023-6-1-2/">关于对话与移动（Unity）</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/01</span>
+            <a class="archive-post-title" href="/2023/06/01/2023-6-1-1/">这是一些没有意义的文字</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/31</span>
+            <a class="archive-post-title" href="/2023/05/31/2023-5-31-2/">杂#1</a>
+        </li>
+    
+    </div>
+</div>
+
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+        
+            <span class="sidebar-tag-name" data-tags="-杂项">
+                <span class="iconfont-archer">&#xe606;</span>
+                -杂项
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="-猫头鹰的梦游日志">
+                <span class="iconfont-archer">&#xe606;</span>
+                -猫头鹰的梦游日志
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="-unity">
+                <span class="iconfont-archer">&#xe606;</span>
+                -unity
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="-草履虫的进化研究">
+                <span class="iconfont-archer">&#xe606;</span>
+                -草履虫的进化研究
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="-oc">
+                <span class="iconfont-archer">&#xe606;</span>
+                -oc
+            </span>
+        
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+        缺失模块，请参考主题文档进行安装配置：https://github.com/fi3ework/hexo-theme-archer#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+
+    </div>
+</div>
+
+        <!-- site-meta -->
+        <script>
+    var siteMetaRoot = "/"
+    if (siteMetaRoot === "undefined") {
+        siteMetaRoot = '/'
+    }
+    var siteMeta = {
+        url: "http://example.com",
+        root: siteMetaRoot,
+        author: "Xn0O"
+    }
+</script>
+
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
+        <!-- main func -->
+        <script src="/scripts/main.js?v=20211217"></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v=20211217"></script>
+        <!-- fancybox -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+        <!-- algolia -->
+        
+        <!-- busuanzi -->
+        
+            <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+        
+        <!-- CNZZ -->
+        
+        <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
+        
+        <!-- mermaid -->
+        
+    </body>
+</html>
